@@ -50,7 +50,7 @@ donations.forEach((card) => {
     if (valor === 0) {
       document.getElementById("pixKey").value = pix[valor];
       pixTitle.innerHTML = "👑 Modo Chefão";
-      pixMessage.innerHTML = ` Escolha qualquer valor que desejar.<br><br> <strong>${fraseChefao()}</strong> `;
+      pixMessage.innerHTML = "Você decidiu escolher outro valor. Qualquer ajuda é muito bem-vinda! ❤️";;
     } else {
       document.getElementById("pixKey").value = pix[valor];
       pixTitle.innerHTML = "🚒 Missão aceita!";
