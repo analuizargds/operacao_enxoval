@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missão: Enxoval</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="card">
+
+        <span class="badge">🚒 MISSÃO</span>
+
+        <h1>Operação Enxoval</h1>
+
+        <p class="subtitle">
+            Passar no concurso foi só o começo...
+            agora vem o boss final: comprar o enxoval. 😅
+        </p>
+
+        <div class="journey">
+
+            <div class="road"></div>
+
+            <img src="runner.png" id="runner" class="runner" alt="Runner">
+
+            <div class="finish">
+                🚒🏁
+            </div>
+
+        </div>
+
+        <p class="progress-text">
+            Progresso: <strong id="current-value"></strong>
+        </p>
+
+        <div class="status">
+            <strong>Status:</strong> Em andamento...
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <h2>👤 Personagem</h2>
+
+        <div class="character">
+
+            <div class="row">
+                <span>Nome</span>
+                <strong>Ana Lídia</strong>
+            </div>
+
+            <div class="row">
+                <span>Classe</span>
+                <strong>Aspirante a Bombeira 🚒</strong>
+            </div>
+
+            <div class="row">
+                <span>Nível</span>
+                <strong>Convocada</strong>
+            </div>
+
+            <div class="status-bar">
+                <label>Energia</label>
+                <div class="bar">
+                    <div class="fill full"></div>
+                </div>
+                <small>100%</small>
+            </div>
+
+            <div class="status-bar">
+                <label>Carteira</label>
+                <div class="bar">
+                    <div class="fill wallet"></div>
+                </div>
+                <small>5%</small>
+            </div>
+
+            <div class="status-bar">
+                <label>Coragem</label>
+                <div class="bar">
+                    <div class="fill full"></div>
+                </div>
+                <small>999+</small>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <h2>🏆 Conquistas 🏆</h2>
+
+        <ul class="achievements">
+            <li class="done">🏅 Concurso derrotado</li>
+            <li class="done">🚪 Convocação desbloqueada</li>
+            <li>🔒 Enxoval completo</li>
+            <li>🔒 Formatura</li>
+            <li>🔒 Primeiro incêndio</li>
+        </ul>
+
+    </div>
+
+    <div class="card">
+
+        <h2>🎯 Escolha como ajudar</h2>
+
+        <div class="donations">
+
+            <div class="donation" data-value="30">
+                <h3>🤏 Foi o que deu</h3>
+                <span>R$ 30</span>
+            </div>
+
+            <div class="donation" data-value="50">
+                <h3>🤝 Tamo junto</h3>
+                <span>R$ 50</span>
+            </div>
+
+            <div class="donation" data-value="100">
+                <h3>👨‍👩‍👧 Mais que família, family</h3>
+                <span>R$ 100</span>
+            </div>
+
+            <div class="donation" data-value="0">
+                <h3>💸 Modo chefão</h3>
+                <span>Outro valor</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="pix-card hidden" id="pixCard">
+
+        <h2 id="pixTitle">🎉 Excelente escolha!</h2>
+
+        <p id="pixMessage"></p>
+
+        <img src="img/qrcode.png" class="qrcode" alt="QR Code PIX">
+
+        <input
+            type="text"
+            id="pixKey"
+            readonly
+            value="00020126360014BR.GOV.BCB.PIX0114SUA_CHAVE_PIX520400005303986540550.005802BR5925ANA LUIZA6009SAO PAULO62070503***6304ABCD">
+
+        <button id="copyPix">
+            📋 Copiar PIX
+        </button>
+
+    </div>
+
+    <div class="card">
+
+        <h2>📋 Objetivos da missão</h2>
+
+        <ul class="tasks">
+            <li class="done">✅ Passar no concurso</li>
+            <li class="done">✅ Sobreviver ao TAF</li>
+            <li class="done">✅ Ser convocada</li>
+            <li>⬜ Comprar o enxoval</li>
+            <li>⬜ Sobreviver ao curso</li>
+            <li>⬜ Descobrir que dormir é luxo</li>
+            <li>⬜ Receber o primeiro "PAGA 20!"</li>
+        </ul>
+
+    </div>
+
+    <div class="card thanks">
+
+        <h2>❤️ Obrigado!</h2>
+
+        <p>
+            Se você chegou até aqui, já faz parte dessa missão.
+            Obrigado por fortalecer esse sonho!
+        </p>
+        <p>
+            Prometo lembrar de vocês quando estiver pagando flexão por causa do instrutor.
+        </p>
+
+    </div>
+
+</div>
+
+</body>
+<script src="script.js"></script>
+</html>

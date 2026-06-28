@@ -1,0 +1,420 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:Poppins,sans-serif;
+
+    background:#f4f4f4;
+
+    color:#222;
+
+    padding:40px 20px;
+
+}
+
+.container{
+
+    max-width:700px;
+
+    margin:auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:24px;
+
+}
+
+.card{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:30px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+}
+
+.badge{
+
+    background:#d62828;
+
+    color:white;
+
+    padding:8px 14px;
+
+    border-radius:50px;
+
+    font-size:.85rem;
+
+    font-weight:600;
+
+}
+
+h1{
+
+    margin-top:18px;
+
+    font-size:2rem;
+
+}
+
+.subtitle{
+
+    margin-top:10px;
+
+    color:#666;
+
+    line-height:1.6;
+
+}
+
+.journey{
+    position: relative;
+    width: 100%;
+    height: 90px;
+    margin: 40px 0 20px;
+}
+
+.road{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    border-top: 5px dashed #cfcfcf;
+    transform: translateY(-50%);
+}
+
+.runner{
+    position: absolute;
+    width: 60px;
+    left: 0;
+    top: 12px;
+    transition: left .8s ease;
+}
+
+.finish{
+    position: absolute;
+    right: 0;
+    top: 10px;
+    font-size: 42px;
+}
+
+.progress-text{
+    text-align:center;
+    color:#555;
+}
+
+.truck{
+
+    position:absolute;
+
+    right:0;
+
+    top:18px;
+
+    font-size:38px;
+
+}
+
+.status{
+
+    text-align:center;
+
+    font-size:1.1rem;
+
+    color:#d62828;
+
+    font-weight:600;
+
+}
+
+h2{
+
+    margin-bottom:25px;
+
+}
+
+.donations{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:18px;
+
+}
+
+.donation{
+
+    border:2px solid #eee;
+
+    border-radius:15px;
+
+    padding:22px;
+
+    text-align:center;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.donation:hover{
+
+    transform:translateY(-5px);
+
+    border-color:#d62828;
+
+}
+
+.highlight{
+
+    background:#d62828;
+
+    color:white;
+
+}
+
+.donation h3{
+
+    font-size:1rem;
+
+    margin-bottom:15px;
+
+}
+
+.donation span{
+
+    font-size:1.5rem;
+
+    font-weight:bold;
+
+}
+
+.tasks{
+
+    list-style:none;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.tasks li{
+
+    background:#f8f8f8;
+
+    padding:14px 18px;
+
+    border-radius:12px;
+
+}
+
+.done{
+
+    color:#666;
+
+}
+
+.thanks{
+
+    text-align:center;
+
+}
+
+.thanks p{
+
+    margin-top:10px;
+
+    color:#666;
+
+    line-height:1.7;
+
+}
+
+.character{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding-bottom:10px;
+    border-bottom:1px solid #ececec;
+}
+
+.row span{
+    color:#666;
+}
+
+.status-bar{
+    display:grid;
+    grid-template-columns:80px 1fr 45px;
+    align-items:center;
+    gap:12px;
+}
+
+.status-bar label{
+    font-weight:600;
+}
+
+.bar{
+    height:12px;
+    background:#ececec;
+    border-radius:30px;
+    overflow:hidden;
+}
+
+.fill{
+    height:100%;
+    border-radius:30px;
+}
+
+.full{
+    width:100%;
+    background:#2ecc71;
+}
+
+.wallet{
+    width:5%;
+    background:#d62828;
+}
+
+.status-bar small{
+    text-align:right;
+    font-weight:600;
+}
+
+.achievements{
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+}
+
+.achievements li{
+    padding:14px 18px;
+    background:#f8f8f8;
+    border-radius:12px;
+}
+
+.achievements .done{
+    border-left:5px solid #2ecc71;
+}
+
+.footer-card{
+    text-align:center;
+    background:linear-gradient(135deg,#d62828,#b71c1c);
+    color:white;
+}
+
+.footer-card h2{
+    margin-bottom:15px;
+}
+
+.footer-card p{
+    line-height:1.8;
+    opacity:.95;
+}
+
+.hidden{
+    display:none;
+}
+
+.pix-card{
+
+    margin-top:25px;
+
+    text-align:center;
+
+}
+
+.qrcode{
+
+    width:220px;
+
+    margin:25px auto;
+
+    display:block;
+
+}
+
+#pixKey{
+
+    width:100%;
+
+    padding:12px;
+
+    border-radius:10px;
+
+    border:1px solid #ddd;
+
+    text-align:center;
+
+}
+
+#copyPix{
+
+    margin-top:20px;
+
+    background:#d62828;
+
+    color:white;
+
+    border:none;
+
+    padding:14px 30px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+}
+
+.donation.selected{
+
+    border-color:#d62828;
+
+    background:#fff4f4;
+
+    transform:scale(1.03);
+
+}
+
+@media(max-width:600px){
+
+    h1{
+
+        font-size:1.6rem;
+
+    }
+
+    .runner{
+
+        left:10%;
+
+        font-size:34px;
+
+    }
+
+    .truck{
+
+        font-size:32px;
+
+    }
+
+}
