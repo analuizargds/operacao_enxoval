@@ -207,6 +207,8 @@ h2{
 
     flex-direction:column;
 
+    gap:5px;
+
 }
 
 .tasks li{
