@@ -36,10 +36,27 @@ const pixTitle = document.getElementById("pixTitle");
 const pixMessage = document.getElementById("pixMessage");
 
 const pix = {
-  30: "00020126430014br.gov.bcb.pix0114+55619833267640203Pix520400005303986540530.005802BR5925ANA_LIDIA_RODRIGUES_DA_SI6008BRASILIA62290525F27uVQc5Kil4awDABYxVFIGJA63047F8E",
-  50: "00020126430014br.gov.bcb.pix0114+55619833267640203Pix520400005303986540550.005802BR5925ANA_LIDIA_RODRIGUES_DA_SI6008BRASILIA622905257vJj1FFdT3TLoYgdPx50jCHvP630465CE",
-  100: "00020126430014br.gov.bcb.pix0114+55619833267640203Pix5204000053039865406100.005802BR5925ANA_LIDIA_RODRIGUES_DA_SI6008BRASILIA62290525iFQ9VPz9oNbLKvCFXoGYOqtPd6304F417",
-  0: "00020126430014br.gov.bcb.pix0114+55619833267640203Pix5204000053039865802BR5925ANA_LIDIA_RODRIGUES_DA_SI6008BRASILIA62290525ON7MfEFbECvHHLiSS4A9MiRc86304DAD6"
+
+    30: {
+        qrcode: "img/pix_30.jpeg",
+        copiaecola: "00020126330014br.gov.bcb.pix011104851666152520400005303986540530.005802BR5925ANA LIDIA RODRIGUES DA SI6008BRASILIA62070503***63043AE6"
+    },
+
+    50: {
+        qrcode: "img/pix_50.jpeg",
+        copiaecola: "00020126330014br.gov.bcb.pix011104851666152520400005303986540550.005802BR5925ANA LIDIA RODRIGUES DA SI6008BRASILIA62070503***63044F56"
+    },
+
+    100: {
+        qrcode: "img/pix_100.jpeg",
+        copiaecola: "00020126330014br.gov.bcb.pix0111048516661525204000053039865406100.005802BR5925ANA LIDIA RODRIGUES DA SI6008BRASILIA62070503***6304B2D1"
+    },
+
+    0: {
+        qrcode: "img/pix_sem.jpeg",
+        copiaecola: "00020126330014br.gov.bcb.pix0111048516661525204000053039865802BR5925ANA LIDIA RODRIGUES DA SI6008BRASILIA62070503***6304AB16"
+    }
+
 };
 
 donations.forEach((card) => {
@@ -47,15 +64,19 @@ donations.forEach((card) => {
     donations.forEach((c) => c.classList.remove("highlight"));
     card.classList.add("highlight");
     const valor = Number(card.dataset.value);
+    const dadosPix = pix[valor];
+
     if (valor === 0) {
-      document.getElementById("pixKey").value = pix[valor];
+      document.getElementById("pixKey").value = dadosPix.copiaecola;
       pixTitle.innerHTML = "👑 Modo Chefão";
-      pixMessage.innerHTML = "Você decidiu escolher outro valor. Qualquer ajuda é muito bem-vinda! ❤️";;
+      pixMessage.innerHTML = "Você decidiu escolher outro valor. Qualquer ajuda é muito bem-vinda! ❤️";
     } else {
-      document.getElementById("pixKey").value = pix[valor];
+      document.getElementById("pixKey").value = dadosPix.copiaecola;
       pixTitle.innerHTML = "🚒 Missão aceita!";
       pixMessage.innerHTML = ` Você escolheu fortalecer a missão com <strong>R$ ${valor}</strong>.<br><br> <strong>${fraseAleatoria()}</strong> `;
     }
+
+    document.getElementById("pixQrCode").src = dadosPix.qrcode;
     pixCard.classList.remove("hidden");
     pixCard.scrollIntoView({ behavior: "smooth", block: "center" });
   });
