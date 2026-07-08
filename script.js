@@ -128,7 +128,7 @@ function fraseAleatoria() {
 
 const campanha = {
   meta: 4000,
-  arrecadado: 0,
+  arrecadado: 40,
 };
 
 atualizarProgresso(campanha.arrecadado);
